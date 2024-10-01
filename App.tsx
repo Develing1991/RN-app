@@ -6,41 +6,40 @@
  */
 
 import React from 'react';
-import {
-  Button,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.input} />
         <Text>텍스트</Text>
-        <Button title="버튼이름" onPress={() => console.log('클릭됨')} />
-        <TextInput />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput style={styles.input} />
+        <Text>텍스트</Text>
       </View>
     </SafeAreaView>
   );
 }
 
-/**
- * style의 픽셀 값은 숫자나 %로
- * margin: 10px 20px; 대신
- * marginVertical: 10
- * marginHorizontal: 20
- */
-
 const styles = StyleSheet.create({
   container: {
-    // marginTop: 50,
+    flex: 1,
+    backgroundColor: 'yellow',
+  },
+  input: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: 'black',
+    height: 100,
+    width: 100,
+  },
+  inputContainer: {
+    flex: 1,
     backgroundColor: 'red',
-    // margin: 10,
-    marginHorizontal: 10,
-    // marginVertical: 50,
+    flexDirection: 'row', // 기본 column
+    alignItems: 'center',
   },
 });
 export default App;
