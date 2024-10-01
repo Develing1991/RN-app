@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
     <SafeAreaView>
       <View style={styles.container}>
         <Text>텍스트</Text>
-        <Button title="버튼이름" onPress={() => console.log('클릭됨')} />{' '}
+        <Button title="버튼이름" onPress={() => console.log('클릭됨')} />
         <TextInput />
       </View>
     </SafeAreaView>
