@@ -3,7 +3,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import AuthHomeScreen from '../../screens/auth/AuthHomeScreen';
 
-import {authNavigation} from '../../constants';
+import {authNavigation, colors} from '../../constants';
 import SignupScreen from '../../screens/auth/SignupScreen';
 import LoginScreen from '../../screens/auth/LoginScreen';
 
@@ -21,10 +21,10 @@ const AuthStackNavigator = ({}: AuthStackNavigatorProps) => {
     <Stack.Navigator
       screenOptions={{
         cardStyle: {
-          backgroundColor: '#fff',
+          backgroundColor: colors.WHITE,
         },
         headerStyle: {
-          backgroundColor: '#fff',
+          backgroundColor: colors.WHITE,
           shadowColor: 'gray',
         },
         headerTitleStyle: {
